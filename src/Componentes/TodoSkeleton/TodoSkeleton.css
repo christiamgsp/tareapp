@@ -1,0 +1,36 @@
+.TodoSkeleton-container {
+  background: -webkit-linear-gradient(90deg, #000000, #000000, #000000);
+  background: linear-gradient(90deg, #000000, #247afe, #76a7f1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  border-radius: 50px;
+  height: 72px;
+  /* Animación de pulso */
+  animation: loading-skeleton 2s infinite ease-in-out;
+  max-width: 550px;
+  width: 95%;
+  margin: 16px auto;
+}
+
+.TodoSkeleton-text {
+  margin: 24px 0 24px 24px;
+  width: 80%;
+  height: 18px;
+  background-color: #fdfdfd;
+}
+
+@keyframes loading-skeleton {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

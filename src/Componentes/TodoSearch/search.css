@@ -1,0 +1,29 @@
+.todoSearch {
+  display: block; /* Para que el margin auto funcione */
+  margin: 24px auto;
+  padding: 12px 24px;
+
+  /* Lo que pediste */
+  max-width: 580px;
+  width: 90%; /* Responsivo para móviles */
+  border: 2px solid #385dbb;
+
+  border-radius: 24px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  outline: none; /* Quita el borde negro feo al hacer click */
+  color: #1e1e2f;
+  box-shadow: 0px 4px 10px rgba(56, 93, 187, 0.1);
+  transition: all 0.3s ease;
+}
+
+.todoSearch::placeholder {
+  color: #a5a5a5;
+}
+
+.todoSearch:focus {
+  /* Al hacer click, el borde brilla un poco */
+  box-shadow: 0px 4px 20px rgba(56, 93, 187, 0.3);
+  transform: scale(1.02);
+}

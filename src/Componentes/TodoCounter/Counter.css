@@ -1,0 +1,18 @@
+.todoCounter {
+  font-family: 'Lexend', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  padding: 48px;
+  color: #1e1e2f;
+  font-weight: 500;
+
+  /* Estas tres líneas aseguran el centrado total */
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.todoCounter span {
+  color: #385dbb;
+  font-weight: 800;
+}
