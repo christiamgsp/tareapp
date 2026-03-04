@@ -1,4 +1,4 @@
-#🚀¡Mira la app en vivo aquí!: [https://christiamgsp.github.io/tareapp/]
+# 🚀¡Mira la app en vivo aquí!: [https://christiamgsp.github.io/tareapp/]
 
 # 📝 TareApp - Gestor de Tareas
 
