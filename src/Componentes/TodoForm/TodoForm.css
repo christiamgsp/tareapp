@@ -6,6 +6,11 @@
   flex-direction: column;
   align-items: center;
   border-radius: 16px; /* Curva más pronunciada para el modal */
+
+  /* AJUSTE RESPONSIVE */
+  width: 90%; /* Ocupa el 90% del ancho del modal */
+  max-width: 400px; /* No crece demasiado en pantallas grandes */
+  margin: 0 auto;
 }
 
 /* El título/label */
@@ -15,7 +20,8 @@
   font-size: 20px;
   font-weight: bold;
   color: #1e1e2f;
-  font-family: sans-serif; /* O la fuente que estés usando */
+  font-family: sans-serif;
+  text-align: center; /* Centrado para que se vea mejor en móviles */
 }
 
 /* El Input con las curvas de 8px que querías */
@@ -26,19 +32,24 @@
   font-size: 16px;
   color: #1e1e2f;
   background-color: #f9f9f9;
-  border: 2px solid #1e1e2f; /* Borde oscuro para que resalte */
-  border-radius: 8px; /* Tus bordes curvos */
+  border: 2px solid #1e1e2f;
+  border-radius: 8px; /* Tus bordes curvos de 8px */
   box-sizing: border-box;
   outline: none;
+
+  /* Evita zoom automático molesto en iPhones al hacer click */
+  font-size: 16px;
 }
 
 /* Contenedor de botones */
 .TodoForm-buttonContainer {
   margin-top: 24px;
   display: flex;
-  gap: 12px; /* Espacio entre botones */
+  gap: 12px;
   width: 100%;
   justify-content: center;
+  /* En móviles muy pequeños, los botones se ponen uno sobre otro */
+  flex-wrap: wrap;
 }
 
 /* Estilo base de los botones */
@@ -50,6 +61,8 @@
   border-radius: 8px; /* Bordes curvos también en botones */
   border: none;
   transition: opacity 0.2s;
+  /* Para que en móviles los botones tengan un tamaño cómodo para el dedo */
+  min-width: 100px;
 }
 
 .TodoForm-button:active {
@@ -67,4 +80,14 @@
   background-color: #97ca3f;
   color: #fff;
   box-shadow: 0px 4px 10px rgba(151, 202, 63, 0.3);
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .TodoForm-container {
+    padding: 16px;
+  }
+  .TodoForm-button {
+    width: 100%; /* Botones a todo lo ancho si el celular es muy angosto */
+  }
 }

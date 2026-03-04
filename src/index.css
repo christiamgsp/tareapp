@@ -1,42 +1,101 @@
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Eliminamos box-sizing de aquí para que el selector universal * lo maneje mejor */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Cambiado a border-box directo para evitar errores de cálculo */
+}
+
 body {
   margin: 0;
+  min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: -webkit-linear-gradient(90deg, #f0f0f4, #d9def3, #a1b7ee);
-  background: linear-gradient(90deg, #a1b7ee, #d9def3, #000c31);
+
+  /* Ajuste de fondo: agregué 'no-repeat fixed' para que no se desfase en móviles */
+  background: linear-gradient(90deg, #a1b7ee, #d9def3, #000c31) no-repeat fixed;
+  background-size: cover;
 }
 
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 .Todo-first-message {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
-  font-family: 'Montserrat', sans-serif; /* O la que estés usando */
+  /* 1. Posicionamiento y Centrado */
+  display: block;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 300px;
 
-  /* Un detalle animado para que resalte */
-  background:
-    linear-gradient(90deg, #000000, #247afe, #000000),
-    transparent 100%;
-  max-width: 550px;
-  width: 95%;
-  margin: 100px auto;
-  border-radius: 50px;
-  border: 2px solid #385dbb;
-  box-shadow: 0px 8px 30px rgba(56, 93, 187, 0.2);
-  padding: 30px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  color: whitesmoke;
+  /* 2. Estilo Visual (Bordes curvos y colores) */
+  background: rgba(56, 93, 187, 0.1);
+  backdrop-filter: blur(4px);
+  border: 2px dashed #385dbb; /* El borde punteado queda genial para "vacío" */
+  border-radius: 30px; /* Tus bordes curvos */
+  padding: 25px;
+
+  /* 3. Texto */
+  color: #385dbb;
   font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
 
+  /* 4. Interactividad (El dedo y el click) */
+  cursor: pointer;
+  outline: none;
   transition: all 0.3s ease;
+
+  /* 5. LA ANIMACIÓN DE LEVITACIÓN */
+  animation: floatingMessage 3s ease-in-out infinite;
+}
+
+/* Definición de la animación */
+@keyframes floatingMessage {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0px 5px 15px rgba(56, 93, 187, 0.1);
+  }
+  50% {
+    transform: translateY(-15px); /* Sube un poco */
+    box-shadow: 0px 20px 30px rgba(56, 93, 187, 0.2); /* La sombra crece al subir */
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0px 5px 15px rgba(56, 93, 187, 0.1);
+  }
+}
+
+/* Efectos al pasar el ratón (Hover) */
+.Todo-first-message:hover {
+  background: rgba(56, 93, 187, 0.2);
+  border-style: solid; /* El borde se vuelve firme al tocarlo */
+  color: #247afe;
+  /* El hover respeta la posición actual pero escala un poquito */
+  transform: scale(1.05);
+}
+
+/* Efecto al presionar (Active) */
+.Todo-first-message:active {
+  transform: scale(0.95);
+}
+/* Media Query para ajustar el texto en pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .Todo-first-message {
+    font-size: 18px; /* Un pelín más pequeño para que no se amontone */
+    padding: 20px;
+    border-radius: 30px; /* Curva ligeramente menor para aprovechar espacio en móvil */
+  }
 }

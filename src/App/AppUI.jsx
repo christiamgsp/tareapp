@@ -37,7 +37,12 @@ function AppUI() {
         {error && <p>Error de carga, inténtelo de nuevo</p>}
 
         {!loading && searchedTodos.length === 0 && (
-          <p className='Todo-first-message'>¡Crea tu primera tarea!</p>
+          <button
+            className='Todo-first-message'
+            onClick={() => setOpenModal(true)} // Reto cumplido: ahora abre el modal
+          >
+            ¡Crea tu primera tarea!
+          </button>
         )}
 
         {!loading &&

@@ -6,33 +6,34 @@
   justify-content: space-between;
   list-style: none;
   padding: 12px 20px;
-  border-radius: 50px; /* Forma de burbuja */
+  border-radius: 50px;
   font-family: 'Lexend', sans-serif;
   color: #fdfdfd;
-  
-  /* Gradiente azul */
-  background: -webkit-linear-gradient(90deg, #000000, #000000, #000000);
-  background: linear-gradient(90deg, #000000, #247afe, #76a7f1);
-  
-  box-shadow: -webkit-linear-gradient(90deg, #100000, #247afe, #ffffff);  
 
-  /* Tamaño y centrado */
+  /* Mantenemos tu gradiente azul */
+  background: linear-gradient(90deg, #000000, #247afe, #76a7f1);
+
+  /* Corregido: box-shadow no acepta gradientes, ajustado a color sólido sutil */
+  box-shadow: 0px 4px 15px rgba(36, 122, 254, 0.3);
+
+  /* Ajuste Responsive: La clave es el 90% */
   max-width: 550px;
-  width: 95%;
+  width: 90%;
   margin: 16px auto;
-  
+
   transition: all 0.3s ease;
 }
 
 .todoText {
-  margin: 0;
+  margin: 0 10px; /* Añadí un poco de margen para que el texto no toque los botones */
   font-size: 18px;
   text-align: center;
-  flex: 1; /* Empuja los botones a los extremos */
+  flex: 1;
   transition: all 0.4s ease;
+  /* Evita que textos muy largos rompan la burbuja */
+  word-break: break-word;
 }
 
-/* Esta es la clase que se activa cuando done es true */
 .todoTextCompleted {
   text-decoration: line-through;
   text-decoration-color: #000717;
@@ -50,31 +51,34 @@
   justify-content: center;
   transition: transform 0.2s;
   padding: 5px;
+  /* Evita que el botón se encoja en móviles */
+  flex-shrink: 0;
 }
 
+/* El resto de tus estilos se mantienen igual */
 .iconButton:hover {
-  transform: scale(1.3);
+  transform: scale(1.2); /* Un poco menos para no tapar el borde en móviles */
 }
 
-/* Opcional: para que la burbuja se vea más sutil si la tarea está lista */
 .todoItemCompleted {
   filter: grayscale(0.4);
   box-shadow: none;
 }
 
 .buttonIcon {
-  width: 24px;   /* Tamaño ideal para que quepa en la burbuja */
+  width: 24px;
   height: 24px;
-  object-fit: contain; /* Mantiene la proporción de tu PNG */
-  pointer-events: none; /* Evita que la imagen interfiera con el click del botón */
+  object-fit: contain;
+  pointer-events: none;
 }
 
-/* Opcional: Si quieres que la imagen se vea un poco transparente cuando no esté "done" */
-.iconButton img {
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.iconButton:hover img {
-  opacity: 1;
+/* Media Query para pantallas pequeñas */
+@media (max-width: 480px) {
+  .todoItem {
+    padding: 10px 15px;
+    border-radius: 30px; /* Una curva un poco más suave para ganar espacio de lectura */
+  }
+  .todoText {
+    font-size: 16px; /* Texto ligeramente más pequeño */
+  }
 }

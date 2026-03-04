@@ -1,26 +1,42 @@
 .TodoSkeleton-container {
+  /* Mantenemos tus gradientes y sombras */
   background: -webkit-linear-gradient(90deg, #000000, #000000, #000000);
-  background: linear-gradient(90deg, #000000, #247afe, #76a7f1);
+  background: linear-gradient(
+    90deg,
+    #a1b7ee,
+    #d9def3,
+    #000c31
+  ); /* Ajusté un poco para que combine con tu body, o deja el tuyo si prefieres */
+
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
-  border-radius: 50px;
+
+  /* Ajustes Responsive */
+  width: 90%; /* Bajamos a 90% para dar aire en los lados del móvil */
+  max-width: 550px; /* No crece más de esto en PC */
+  margin: 16px auto; /* Centrado */
+
   height: 72px;
-  /* Animación de pulso */
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  border-radius: 50px; /* Tus bordes curvos intactos */
+
+  /* Animación */
   animation: loading-skeleton 2s infinite ease-in-out;
-  max-width: 550px;
-  width: 95%;
-  margin: 16px auto;
 }
 
 .TodoSkeleton-text {
-  margin: 24px 0 24px 24px;
-  width: 80%;
+  /* Eliminamos el margen izquierdo fijo que puede empujar el contenido hacia afuera */
+  width: 70%;
   height: 18px;
-  background-color: #fdfdfd;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Color más suave para que se vea el fondo */
+  border-radius: 10px; /* Un toque curvo también al texto de carga */
 }
 
 @keyframes loading-skeleton {
@@ -32,5 +48,13 @@
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+/* Ajuste extra para móviles muy pequeños */
+@media (max-width: 480px) {
+  .TodoSkeleton-container {
+    height: 60px; /* Un poco más delgado en móvil */
+    border-radius: 30px; /* Ajuste sutil de curva para pantallas pequeñas */
   }
 }
