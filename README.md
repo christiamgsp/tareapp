@@ -1,3 +1,5 @@
+#🚀¡Mira la app en vivo aquí!: [https://christiamgsp.github.io/tareapp/]
+
 # 📝 TareApp - Gestor de Tareas
 
 **TareApp** es una aplicación de gestión de tareas desarrollada con **React** como parte del curso de Platzi. El enfoque principal fue crear una interfaz limpia, moderna y altamente funcional.
