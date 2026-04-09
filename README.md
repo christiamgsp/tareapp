@@ -17,7 +17,7 @@
 
 ---
 
-## 📸 Vista Previa (Cuadrícula 2x2)
+## 📸 Vista Previa
 
 <div align="center">
   <table style="border-collapse: collapse; border: none;">
@@ -60,3 +60,14 @@ Si deseas ejecutar este proyecto en tu propia máquina, sigue estos pasos:
    ```bash
    git clone [https://github.com/christiamgsp/tareapp.git](https://github.com/christiamgsp/tareapp.git)
    ```
+   2.Instalación de dependencias:
+
+Bash
+npm install
+3.Lanzamiento del servidor de desarrollo:
+
+Bash
+npm start
+
+👨‍💻 Autor
+Desarrollado con dedicación por Christiam GSP como parte de su formación en desarrollo de aplicaciones con React.
