@@ -4,44 +4,51 @@
 
 🌐 **Despliegue oficial:** [Ver Tareapp en vivo](https://christiamgsp.github.io/tareapp/)
 
-![Tareapp Banner](public/ta1.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta1.png" width="600px" alt="Tareapp Banner" />
+</div>
+
+---
 
 ## 🎨 Características de Vanguardia
 
 - **🌓 Modo Oscuro Premium:** Interfaz adaptable con paleta "Midnight Deep Blue" para una lectura cómoda en entornos oscuros.
-- **📱 Responsive Design:** Experiencia optimizada para móviles, tablets y escritorio.
-- **💾 Persistencia de Datos:** Integración con `localStorage` para que tus tareas nunca se pierdan al cerrar el navegador.
-- **⚡ Búsqueda Dinámica:** Filtrado de tareas en tiempo real con respuesta instantánea.
-- **🎯 UX Minimalista:** Botones flotantes ergonómicos y transiciones suaves para una navegación sin fricciones.
+- **📱 Responsive Design:** Experiencia optimizada para móviles, tablets y escritorio (Mobile First).
+- **💾 Persistencia de Datos:** Integración con `localStorage` para que tus tareas nunca se pierdan al cerrar el navegador o refrescar la página.
+- **⚡ Búsqueda Dinámica:** Filtrado de tareas en tiempo real con respuesta instantánea mediante estados de React.
+- **🎯 UX Minimalista:** Botones flotantes ergonómicos (FAB) y transiciones suaves para una navegación sin fricciones.
+- **🧩 Portales de React:** Uso de Modales avanzados para una arquitectura de componentes limpia y profesional.
 
 ---
 
 ## 📸 Capturas de Pantalla
 
 <div align="center">
-  <img src="public/ta2.png" width="45%" alt="Vista Principal" />
-  <img src="public/ta3.png" width="45%" alt="Modo Oscuro" />
+  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta2.png" width="300px" alt="Vista Principal" style="margin: 10px;" />
+  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta3.png" width="300px" alt="Modo Oscuro" style="margin: 10px;" />
 </div>
 <br />
 <div align="center">
-  <img src="public/ta4.png" width="91%" alt="Diseño Responsivo" />
+  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta4.png" width="500px" alt="Diseño Responsivo" />
 </div>
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-- **React.js:** Desarrollo basado en componentes y estados eficientes.
-- **Context API:** Gestión de estado global para temas y lógica de tareas.
-- **Custom Hooks:** Lógica desacoplada para el manejo de almacenamiento local.
-- **CSS Modules:** Estilos aislados y variables dinámicas para el cambio de tema.
-- **React Icons:** Set de iconos profesionales y minimalistas.
+- **React.js:** Biblioteca principal basada en componentes para una UI reactiva.
+- **Context API:** Gestión de estado global para centralizar la lógica de tareas, el tema y los modales.
+- **Custom Hooks:** Lógica desacoplada mediante `useLocalStorage` para la sincronización de datos.
+- **CSS Modules:** Estilos encapsulados y variables dinámicas para una tematización robusta.
+- **React Icons:** Iconografía vectorial de alta fidelidad para una interfaz moderna.
 
 ---
 
-## 🚀 Guía de Inicio Rápido
+## 🚀 Guía de Instalación Local
 
-1. **Clonación:**
+Si deseas ejecutar este proyecto en tu propia máquina, sigue estos pasos:
+
+1. **Clonación del repositorio:**
    ```bash
    git clone [https://github.com/christiamgsp/tareapp.git](https://github.com/christiamgsp/tareapp.git)
    ```
