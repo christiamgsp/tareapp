@@ -33,7 +33,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://christiamgsp.github.io/tareapp",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
