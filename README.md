@@ -4,10 +4,6 @@
 
 🌐 **Despliegue oficial:** [Ver Tareapp en vivo](https://christiamgsp.github.io/tareapp/)
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta1.png" width="600px" alt="Tareapp Banner" />
-</div>
-
 ---
 
 ## 🎨 Características de Vanguardia
@@ -21,15 +17,27 @@
 
 ---
 
-## 📸 Capturas de Pantalla
+## 📸 Vista Previa (Cuadrícula 2x2)
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta2.png" width="300px" alt="Vista Principal" style="margin: 10px;" />
-  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta3.png" width="300px" alt="Modo Oscuro" style="margin: 10px;" />
-</div>
-<br />
-<div align="center">
-  <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta4.png" width="500px" alt="Diseño Responsivo" />
+  <table style="border-collapse: collapse; border: none;">
+    <tr>
+      <td style="padding: 10px; border: none;">
+        <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta1.png" width="280px" alt="Tareapp Banner" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+      </td>
+      <td style="padding: 10px; border: none;">
+        <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta2.png" width="280px" alt="Vista Principal" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: none;">
+        <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta3.png" width="280px" alt="Modo Oscuro" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+      </td>
+      <td style="padding: 10px; border: none;">
+        <img src="https://raw.githubusercontent.com/christiamgsp/tareapp/main/public/ta4.png" width="280px" alt="Diseño Responsivo" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
