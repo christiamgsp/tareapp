@@ -3,11 +3,9 @@ import './TodoForm.css';
 import { TodoContext } from '../../TodoContext';
 
 function TodoForm() {
-  // 1. Los Hooks SIEMPRE van al principio del componente
   const { addTodo, setOpenModal } = React.useContext(TodoContext);
   const [newTodoValues, setNewTodoValues] = React.useState('');
 
-  // 2. Definimos las funciones de manejo por separado
   const onChange = (event) => {
     setNewTodoValues(event.target.value);
   };
@@ -18,20 +16,22 @@ function TodoForm() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValues); // Ahora sí reconoce la variable
+    if (newTodoValues.trim().length <= 0) return;
+    addTodo(newTodoValues);
     setOpenModal(false);
   };
 
   return (
     <form className='TodoForm-container' onSubmit={onSubmit}>
-      <label className='TodoForm-label'>Escribe tu nueva tarea</label>
+      <label className='TodoForm-label'>Nueva tarea</label>
 
       <input
         type='text'
         className='TodoForm-input'
-        placeholder='Reservar mesa para cenar'
-        value={newTodoValues} // Ahora existe para el input
-        onChange={onChange} // Ahora existe para el input
+        placeholder='Ej: Estudiar React'
+        value={newTodoValues}
+        onChange={onChange}
+        autoFocus
       />
 
       <div className='TodoForm-buttonContainer'>

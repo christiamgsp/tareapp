@@ -2,27 +2,23 @@
   font-family: 'Lexend', sans-serif;
   font-size: 24px;
   margin: 0;
-  /* Ajuste: 48px arriba/abajo, pero menos a los lados para móviles */
-  padding: 48px 20px;
-  color: #1e1e2f;
+  padding: 60px 20px 30px 20px;
+  color: var(--text-main);
   font-weight: 500;
-
   text-align: center;
   display: block;
   width: 100%;
-  /* Asegura que el padding no sume al ancho total */
   box-sizing: border-box;
 }
 
 .todoCounter span {
-  color: #385dbb;
+  color: var(--accent);
   font-weight: 800;
 }
 
-/* Media Query para que el título no sea gigante en el móvil */
 @media (max-width: 480px) {
   .todoCounter {
     font-size: 20px;
-    padding: 30px 15px;
+    padding: 40px 15px 20px 15px;
   }
 }

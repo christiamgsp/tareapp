@@ -1,84 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
 .todoItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  list-style: none;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-family: 'Lexend', sans-serif;
-  color: #fdfdfd;
-
-  /* Mantenemos tu gradiente azul */
-  background: linear-gradient(90deg, #000000, #247afe, #76a7f1);
-
-  /* Corregido: box-shadow no acepta gradientes, ajustado a color sólido sutil */
-  box-shadow: 0px 4px 15px rgba(36, 122, 254, 0.3);
-
-  /* Ajuste Responsive: La clave es el 90% */
-  max-width: 550px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 24px;
+  max-width: 500px;
   width: 90%;
   margin: 16px auto;
-
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
 }
 
 .todoText {
-  margin: 0 10px; /* Añadí un poco de margen para que el texto no toque los botones */
-  font-size: 18px;
-  text-align: center;
   flex: 1;
-  transition: all 0.4s ease;
-  /* Evita que textos muy largos rompan la burbuja */
+  margin: 0 15px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-main);
   word-break: break-word;
 }
 
 .todoTextCompleted {
   text-decoration: line-through;
-  text-decoration-color: #000717;
-  opacity: 0.6;
+  opacity: 0.5;
   font-style: italic;
 }
 
 .iconButton {
-  background: transparent;
+  background: var(--bg-main);
   border: none;
+  padding: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 27px;
+  font-size: 22px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s;
-  padding: 5px;
-  /* Evita que el botón se encoja en móviles */
-  flex-shrink: 0;
+  color: var(--text-main);
 }
 
-/* El resto de tus estilos se mantienen igual */
 .iconButton:hover {
-  transform: scale(1.2); /* Un poco menos para no tapar el borde en móviles */
-}
-
-.todoItemCompleted {
-  filter: grayscale(0.4);
-  box-shadow: none;
-}
-
-.buttonIcon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-/* Media Query para pantallas pequeñas */
-@media (max-width: 480px) {
-  .todoItem {
-    padding: 10px 15px;
-    border-radius: 30px; /* Una curva un poco más suave para ganar espacio de lectura */
-  }
-  .todoText {
-    font-size: 16px; /* Texto ligeramente más pequeño */
-  }
+  transform: scale(1.1);
 }

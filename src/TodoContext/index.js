@@ -13,6 +13,7 @@ function TodoProvider({ children }) {
 
   const [searchValue, setSearchValue] = React.useState('');
   const [openModal, setOpenModal] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(false);
 
   const completedTodos = todos.filter((todo) => !!todo.done).length;
   const totalTodos = todos.length;
@@ -27,7 +28,7 @@ function TodoProvider({ children }) {
     const newTodos = [...todos];
     newTodos.push({
       text,
-      completed: false,
+      done: false,
     });
     saveTodos(newTodos);
   };
@@ -35,14 +36,16 @@ function TodoProvider({ children }) {
   const donetask = (text) => {
     const tareaIndex = todos.findIndex((t) => t.text === text);
     const newTodos = [...todos];
-    newTodos[tareaIndex] = { ...newTodos[tareaIndex], done: true };
+
+    newTodos[tareaIndex] = {
+      ...newTodos[tareaIndex],
+      done: !newTodos[tareaIndex].done,
+    };
     saveTodos(newTodos);
   };
 
   const deleteTask = (text) => {
-    const tareaIndex = todos.findIndex((t) => t.text === text);
-    const newTodos = [...todos];
-    newTodos.splice(tareaIndex, 1);
+    const newTodos = todos.filter((t) => t.text !== text);
     saveTodos(newTodos);
   };
 
@@ -61,6 +64,8 @@ function TodoProvider({ children }) {
         deleteTask,
         openModal,
         setOpenModal,
+        darkMode,
+        setDarkMode,
       }}>
       {children}
     </TodoContext.Provider>

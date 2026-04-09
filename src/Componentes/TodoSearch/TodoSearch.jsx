@@ -1,6 +1,6 @@
 import React from 'react';
 import { TodoContext } from '../../TodoContext';
-import './search.css'; // Importación exacta del nombre de tu archivo
+import './search.css';
 
 function TodoSearch() {
   const { searchValue, setSearchValue } = React.useContext(TodoContext);
@@ -10,7 +10,6 @@ function TodoSearch() {
   };
 
   return (
-    /* Usamos un contenedor para que el Flexbox del CSS lo centre fácil */
     <div className='todoSearch-container'>
       <input
         className='todoSearch'

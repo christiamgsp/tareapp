@@ -1,37 +1,33 @@
+.todoSearch-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
 .todoSearch {
-  display: block;
-  margin: 24px auto;
-  padding: 12px 24px;
-  max-width: 580px;
-  width: 90%;
-  border: 2px solid #385dbb;
-  border-radius: 24px;
+  width: 100%;
+  max-width: 500px;
+  padding: 16px 24px;
+  border-radius: 20px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-main);
   font-family: 'Lexend', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   outline: none;
-  color: #1e1e2f;
-  box-shadow: 0px 4px 10px rgba(56, 93, 187, 0.1);
+  box-shadow: var(--shadow);
   transition: all 0.3s ease;
-
-  /* AJUSTE PARA MÓVIL: Evita estilos por defecto de iOS/Android */
-  -webkit-appearance: none;
-  appearance: none;
 }
 
 .todoSearch::placeholder {
-  color: #a5a5a5;
+  color: var(--text-main);
+  opacity: 0.5;
 }
 
 .todoSearch:focus {
-  box-shadow: 0px 4px 20px rgba(56, 93, 187, 0.3);
-  transform: scale(1.02);
-}
-
-/* OPCIONAL: Si el texto se ve muy grande en móviles pequeños */
-@media (max-width: 480px) {
-  .todoSearch {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }

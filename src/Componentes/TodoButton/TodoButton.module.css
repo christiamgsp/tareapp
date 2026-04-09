@@ -1,44 +1,35 @@
-.addButton {
-  background-color: #385dbb;
-  color: #f2f5fc;
-  /* Reduje un poco la dispersión de la sombra para evitar el scroll lateral en móviles */
-  box-shadow: 0px 5px 20px rgba(56, 93, 187, 0.4);
-  border: #f2f5fc 2px solid;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 50px;
-  font-weight: bold;
-
+.floatingButton {
   position: fixed;
-  bottom: 24px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: white;
+  border: 5px solid var(--bg-card);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 64px;
-  width: 64px;
-  z-index: 100;
-  transition: all 0.3s ease;
-
-  /* IMPORTANTE: Evita que el botón sea "clickeable" fuera de su círculo */
-  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.addButton:hover {
-  /* Mantenemos tu rotación y escala */
-  transform: translateX(-50%) scale(1.15) rotate(90deg);
-  background-color: #247afe;
+.floatingButton:hover {
+  transform: translateX(-50%) scale(1.1) rotate(90deg);
+  background-color: var(--accent);
 }
 
 @media (max-width: 480px) {
-  .addButton {
-    height: 56px;
-    width: 56px;
-    font-size: 40px;
-    bottom: 16px;
-    /* Suavizamos la sombra en móvil para que no se vea pesada */
-    box-shadow: 0px 4px 15px rgba(56, 93, 187, 0.3);
+  .floatingButton {
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    font-size: 30px;
   }
 }
