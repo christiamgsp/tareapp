@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tareapp/static/css/main.f16c4a23.css",
-    "main.js": "/tareapp/static/js/main.2c2c5f16.js",
+    "main.css": "/tareapp/static/css/main.1bea167f.css",
+    "main.js": "/tareapp/static/js/main.cd0161d5.js",
     "index.html": "/tareapp/index.html",
-    "main.f16c4a23.css.map": "/tareapp/static/css/main.f16c4a23.css.map",
-    "main.2c2c5f16.js.map": "/tareapp/static/js/main.2c2c5f16.js.map"
+    "main.1bea167f.css.map": "/tareapp/static/css/main.1bea167f.css.map",
+    "main.cd0161d5.js.map": "/tareapp/static/js/main.cd0161d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.f16c4a23.css",
-    "static/js/main.2c2c5f16.js"
+    "static/css/main.1bea167f.css",
+    "static/js/main.cd0161d5.js"
   ]
 }
